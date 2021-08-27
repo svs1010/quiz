@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> quiz </title>
+</head>
+
+
+<style type="text/css">
+	.d
+	{
+		top: 0px;
+       position: absolute;
+       left: 0px;
+       height: 575px;
+       width: 300px;
+       background-color: red;
+	}
+	.d1
+	{
+		top: 0px;
+      position: absolute;
+       left: 960px;
+       height: 575px;
+       width: 300px;
+       background-color: red;
+	}
+	.d2
+	{
+       top: 250px;
+      position: absolute;
+       left: 580px;
+       height: 100px;
+       width: 100px;
+       background-color: green;
+       transition: background 3s;
+	}
+</style>
+<body onkeypress="mov()">
+<div class="d"></div>
+<div class="d1"></div>
+<div class="d2" id="da"></div>
+<script type="text/javascript">
+	x=580;
+	function mov() 
+	{
+		
+		if (event.code=="KeyD") 
+		{
+			x=x+5;
+            da.style.left=x+"px";
+		}
+		if (event.code=="KeyA") 
+		{
+			x=x-5;
+            da.style.left=x+"px";
+		}
+		if (x==240) 
+		{
+			da.style.background="orange";
+		}
+		if (x<230) 
+		{
+			da.style.background="purple";
+		}
+		if (x==915) 
+		{
+			da.style.background="blue";
+		}
+		if (x>925) 
+		{
+			da.style.background="yellow";
+		}
+		if (x>250&&x<905) 
+		{
+			da.style.background="green";
+		}
+	}
+</script>
+</body>
+</html>
